@@ -8,9 +8,13 @@
 
 int main(){
 
+    char exit;
+
     printf("Bem vindos a UPE\n");
+
+    printf("\nPressione qualquer tecla para sair do programa.");
+    scanf("%c");
 
     return 0;
 
 }
-

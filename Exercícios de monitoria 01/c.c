@@ -20,11 +20,15 @@
     tamanho = sizeof(notas)/sizeof(int);
 
     media = soma / tamanho;
+    
     if( media > 7 ){
       printf("Media : %.2f.\nParabéns, você foi aprovado =)", media);
     }else{
       printf("Media : %.2f.\nVocê nâo foi aprovado =(", media);
     }
+
+    printf("\nPressione qualquer tecla para sair do programa.");
+    scanf("%c");
 
     return 0;
  }

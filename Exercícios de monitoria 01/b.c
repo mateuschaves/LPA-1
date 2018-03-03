@@ -23,5 +23,8 @@
 
     printf("Média: %f", media);
 
+    printf("\nPressione qualquer tecla para sair do programa.");
+    scanf("%c");
+
     return 0;
  }
