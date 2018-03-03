@@ -21,9 +21,9 @@
 
     media = soma / tamanho;
     if( media > 7 ){
-      printf("Media : %.2f.\nParab�ns, voc� foi aprovado =)", media);
+      printf("Media : %.2f.\nParabéns, você foi aprovado =)", media);
     }else{
-      printf("Media : %.2f.\nVoc� n�o foi aprovado =(", media);
+      printf("Media : %.2f.\nVocê nâo foi aprovado =(", media);
     }
 
     return 0;
