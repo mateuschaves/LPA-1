@@ -6,25 +6,17 @@
  *
  *  Notas = 9.0, 3.0, 5.0
  */
-
  int main(void) {
-
     float notas[] = {9.0, 3.0, 5.0};
     float soma, media;
     int i, tamanho;
-
-    for(i = 0; i < sizeof(notas)/sizeof(int); i++){
+    tamanho = sizeof(notas)/sizeof(int);
+    for(i = 0; i < tamanho; i++){
       soma += notas[i];
     }
-
-    tamanho = sizeof(notas)/sizeof(int);
-
     media = soma/tamanho;
-
     printf("Média: %f", media);
-
-    printf("\nPressione qualquer tecla para sair do programa.");
+    printf("\nPressione qualquer tecla para sair do programa.\n");
     scanf("%c");
-
     return 0;
  }
