@@ -34,7 +34,6 @@ int main(){
         n[index] = maior;
     }
     for(i = 0; i < 3; i++){
-        printf("%i", m[i]);
         soma += m[i];
     }
     printf("Soma : %i ", soma);
