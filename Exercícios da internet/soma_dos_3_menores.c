@@ -6,6 +6,7 @@ int main(){
     int n[4] = {0,0,0,0};
     int m[3] = {0,0,0};
     int i, maior, menor, diferenca = 0;
+    int soma = 0;
     int o = 1;
     int bye = 1;
     int index;
@@ -32,13 +33,10 @@ int main(){
         m[l] = menor;
         n[index] = maior;
     }
-    printf("Menores numeros digitados : ");
     for(i = 0; i < 3; i++){
-        if(i == 2){
-            printf("%i.", m[i]);
-        }else{
-            printf("%i, ", m[i]);
-        }
+        printf("%i", m[i]);
+        soma += m[i];
     }
+    printf("Soma : %i ", soma);
     scanf("%i", &bye);
 }
