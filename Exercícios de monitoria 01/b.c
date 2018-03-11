@@ -7,7 +7,7 @@
  *  Notas = 9.0, 3.0, 5.0
  */
  int main(void) {
-    float notas[] = {9.0, 3.0, 5.0};
+    float notas[] = {7.0, 7.5, 7.0};
     float soma, media;
     int i, tamanho;
     tamanho = sizeof(notas)/sizeof(int);
@@ -15,8 +15,10 @@
       soma += notas[i];
     }
     media = soma/tamanho;
-    printf("Média: %f", media);
-    printf("\nPressione qualquer tecla para sair do programa.\n");
-    scanf("%c");
+    if(media >= 7){
+    	printf("Aprovado %f", media);
+	}else{
+		printf("Reprovado %f", media);
+	}
     return 0;
  }
