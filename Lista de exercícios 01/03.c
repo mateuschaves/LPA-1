@@ -11,8 +11,10 @@ int main(){
     scanf("%f", &valor);
     printf("Digite o valor do desconto: ");
     scanf("%f", &desconto);
-    valor_final = valor-desconto;
+    desconto = desconto / 100;
+    valor_final = valor - (valor*desconto);
     printf("O valor final do produto eh de : %.2f", valor_final);
+    printf("\nO desconto foi de : %.2f %%", desconto*100);
     printf("\nPressione qualquer tecla para sair do programa.");
     scanf("%f", &desconto);
 }
