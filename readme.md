@@ -1,6 +1,6 @@
-# Lógica de programação e algoritmos
+# Lógica de programação e algoritmos I
 
-Códigos de aulas, exercícios e monitorias.
+Códigos desenvolvidos em aulas, exercícios e monitorias.
 
 ## Instalando
 
