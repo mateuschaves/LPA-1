@@ -1,8 +1,8 @@
-# Lógica de programação e algoritmos.
+# Lógica de programação e algoritmos
 
 Códigos de aulas, exercícios e monitorias.
 
-## Instalando.
+## Instalando
 
 Digite: 
 ```
@@ -10,15 +10,15 @@ git clone https://github.com/mateuschaves/LPA-1.git
 ```
 ## Pré-requisitos
 
-[GCC - The GNU Compiler Collection.](https://gcc.gnu.org/).
+[GCC - The GNU Compiler Collection](https://gcc.gnu.org/)
 
-## Compilando.
+## Compilando
 
-Abra o cmd na pasta do projeto e digite:
+Abra o cmd na pasta do arquivo e digite:
 ```
 gcc  nome-do-arquivo.c -o nome-do-arquivo-de-saida.exe
 ```
 
-## Autor.
+## Autor
 
-* **[Mateus Henrique]**(https://github.com/mateuschaves) 
+* **Mateus Henrique** [Perfil](https://github.com/mateuschaves) 
