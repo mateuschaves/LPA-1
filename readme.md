@@ -21,4 +21,4 @@ gcc  nome-do-arquivo.c -o nome-do-arquivo-de-saida.exe
 
 ## Autor
 
-* **Mateus Henrique** [Perfil](https://github.com/mateuschaves) 
+* **Mateus Henrique** - [Github](https://github.com/mateuschaves) 
