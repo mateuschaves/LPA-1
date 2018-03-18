@@ -4,7 +4,7 @@
         5.	Escreva um programa para ler o número de gols marcados pelo Grêmio
             e o número de gols marcados pelo Inter em um GRENAL. Escrever o nome
             do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.
-    */
+*/
 int main(){
     int gremio, inter;
     printf("Informe o numero de gols do gremio: ");
