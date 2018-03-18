@@ -26,7 +26,7 @@ int main(){
         maiores[c] = maior;
         maior = 0;
         i = 0;
-    }
+    } 
     soma = maiores[0] + maiores[1];
     printf("A soma dos 2 maiores numeros eh: %f \n", soma);
     system("PAUSE");
