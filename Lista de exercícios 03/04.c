@@ -16,5 +16,5 @@ int main(){
     }else{
         printf("O ano nao eh bissexto! \n");
     }
-    system("pause");
+    system("pause"); 
 }
