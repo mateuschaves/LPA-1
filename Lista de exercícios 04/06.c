@@ -10,13 +10,21 @@
 */
 int main(){
     float altura, maior_altura = 0, menor_altura, media_altura_mulheres = 0;
-    int quantidade_homens = 0, quantidade_mulheres = 0, i, c = 0;
+    int quantidade_homens = 0, quantidade_mulheres = 0, i, c = 0, v;
     char sexo, sexo_mais_alto;
     for(i = 1; i <= 6; i++){
-        printf("Informe o seu sexo: (M - Masculino, F- Feminino): ");
-        scanf(" %c", &sexo);
-        printf("informe a sua altura (Em metros): ");
-        scanf("%f", &altura);
+        do{
+            printf("Informe o seu sexo: (M - Masculino, F- Feminino): ");
+            scanf(" %c", &sexo);
+            if(sexo == 'M' || sexo == 'm' || sexo == 'f' || sexo == 'F'){
+                v = 1;
+            }
+        }while(v != 1);
+        v = 0;
+        do{
+            printf("informe a sua altura (Em metros): ");
+            v = scanf("%f", &altura);
+        }while(v != 1);
         if(c == 0){
             menor_altura = altura;
             c++;
