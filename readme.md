@@ -22,3 +22,7 @@ gcc  nome-do-arquivo.c -o nome-do-arquivo-de-saida.exe
 ## Autor
 
 * **Mateus Henrique** - [Github](https://github.com/mateuschaves) 
+
+## Professor
+
+* **Prof. Dr. Roberta A. de A. Fagundes** - [Site](http://robertafagundes.wixsite.com/raaf)
