@@ -25,4 +25,4 @@ gcc  nome-do-arquivo.c -o nome-do-arquivo-de-saida.exe
 
 ## Professor
 
-* **Prof. Dr. Roberta A. de A. Fagundes** - [Site](http://robertafagundes.wixsite.com/raaf)
+* **Prof. Dr. Roberta A. de A. Fagundes** - [Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4718435E7)
