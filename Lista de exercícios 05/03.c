@@ -76,42 +76,12 @@ int main(){
     mi_eng /= (float) eng;
     mi_com /= (float) com;
     mi_adm /= (float) adm;
-    if(mi_eng <= mi_com){
-        if(mi_eng < mi_adm){
-            printf("\nCurso com menor media de idade: Engenharia. Media: %f \n", mi_eng);
-        }else{
-            printf("\nCurso com menor media de idade: Administracao. Media: %f \n", mi_adm);
-        }
-    }else if(mi_eng <= mi_adm){
-        if(mi_eng < mi_com){
-            printf("\nCurso com menor media de idade: Engenharia. Media: %f \n", mi_eng);
-        }else{
-            printf("\nCurso com menor media de idade: Computacao. Media: %f \n", mi_com);
-        }
-    }else if(mi_adm <= mi_eng){
-        if(mi_adm < mi_com){
-            printf("\nCurso com menor media de idade: Administracao. Media: %f \n", mi_adm);
-        }else{
-            printf("\nCurso com menor media de idade: Computacao. Media: %f \n", mi_com);
-        }
-    }else if(mi_adm <= mi_com){
-        if(mi_adm < mi_eng){
-            printf("\nCurso com menor media de idade: Administracao. Media: %f \n", mi_adm);
-        }else{
-            printf("\nCurso com menor media de idade: Engenharia. Media:  %f \n", mi_eng);
-        }
-    }else if(mi_com <= mi_eng){
-        if(mi_com < mi_adm){
-            printf("\nCurso com menor media de idade: Computacao. Media: %f \n", mi_com);
-        }else{
-            printf("\nCurso com menor media de idade: Administracao. Media: %f \n", mi_adm);
-        }
-    }else if(mi_com <= mi_adm){
-        if(mi_com < mi_eng){
-            printf("\nCurso com menor media de idade: Computacao. Media: %f \n", mi_com);
-        }else{
-            printf("\nCurso com menor media de idade: Engenharia. Media: %f \n", mi_eng);
-        }
+    if(mi_eng > mi_com && mi_eng > mi_adm){
+        printf("O curso com maior media de idade: Engenharia. Media: %f\n", mi_eng);
+    }else if (mi_com > mi_adm){
+        printf("O curso com maior media de idade: Computacao. Media: %f\n", mi_com);
+    }else{
+        printf("O curso com maior media de idade: Administracao. Media: %f\n", mi_adm);
     }
     printf("%i alunos no curso de computacao, sendo %i entre 20 a 25 anos.\n", com, i_com);
     printf("%i alunos no curso de engenharia, sendo %i entre 20 a 25 anos\n", eng, i_eng);
