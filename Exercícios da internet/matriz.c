@@ -18,6 +18,15 @@ int main(){
             scanf("%i", &m[i][j]);
         }
     }
-    printf("%i, %i, %i, %i.\n", m[0][0], m[1][1], m[2][2], m[3][3], m[4][4]);
+    i = 0;
+    j = 0;
+    for(; i < 4; i++){
+        for(; j < 4; j++){
+            if(i == j){
+                printf("%i\n", m[i][j]);
+            }
+        }
+    j = 0;
+    }
     system("pause");
 }
