@@ -76,12 +76,24 @@ int main(){
     mi_eng /= (float) eng;
     mi_com /= (float) com;
     mi_adm /= (float) adm;
+    // Maior e menor média de idade.
     if(mi_eng > mi_com && mi_eng > mi_adm){
-        printf("O curso com maior media de idade: Engenharia. Media: %f\n", mi_eng);
+        if(mi_com > mi_adm){
+            printf("O curso com menor media de idade: Administracao. Media: %.2f\n", mi_adm);
+        }else{
+            printf("O curso com menor media de idade: Computacao. Media: %.2f\n", mi_com);
+        }
+        printf("O curso com maior media de idade: Engenharia. Media: %.2f\n", mi_eng);
     }else if (mi_com > mi_adm){
-        printf("O curso com maior media de idade: Computacao. Media: %f\n", mi_com);
+        if(mi_eng < mi_adm){
+            printf("O curso com menor media de idade: Engenharia. Media: %.2f\n", mi_eng);
+        }else{
+            printf("O curso com menor media de idade: Administracao. Media: %.2f\n", mi_adm);
+        }
+        printf("O curso com maior media de idade: Computacao. Media: %.2f\n", mi_com);
     }else{
-        printf("O curso com maior media de idade: Administracao. Media: %f\n", mi_adm);
+        printf("O curso com menor media de idade: Engenharia. Media: %.2f\n", mi_eng);
+        printf("O curso com maior media de idade: Administracao. Media: %.2f\n", mi_adm);
     }
     printf("%i alunos no curso de computacao, sendo %i entre 20 a 25 anos.\n", com, i_com);
     printf("%i alunos no curso de engenharia, sendo %i entre 20 a 25 anos\n", eng, i_eng);
