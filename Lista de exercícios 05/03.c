@@ -73,9 +73,15 @@ int main(){
         }while(v != 1);
         i++;
     }while(menu != 0);
-    mi_eng /= (float) eng;
-    mi_com /= (float) com;
-    mi_adm /= (float) adm;
+    if(mi_eng != 0){
+        mi_eng /= (float) eng;
+    }
+    if(mi_com != 0){
+        mi_com /= (float) com;
+    }
+    if(mi_adm != 0){
+        mi_adm /= (float) adm;
+    }
     // Maior e menor média de idade.
     if(mi_eng > mi_com && mi_eng > mi_adm){
         if(mi_com > mi_adm){
