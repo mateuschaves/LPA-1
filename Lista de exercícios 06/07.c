@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
+    7.	Faça um Programa que leia 20 números inteiros e armazene-os num vetor.
+        Armazene os números pares no vetor PAR e os números IMPARES no vetor impar.
+        Imprima os três vetores.
+*/
 void main(void){
     int numeros[20], pares[20], p = 0, impares[20], im = 0, i = 0;
     for(i = 0; i < 20; i++){
