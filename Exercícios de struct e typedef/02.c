@@ -1,5 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+        PROBLEMAS CONHECIDOS
+
+    1. O algoritmo não consegue calcular com precisão
+       a data final do evento quando se passa dois
+       meses do início do evento.
+    
+*/
+
+
 // Criando uma strutura ' classe ' chamada dma. 
 struct dma {
     int dia;
