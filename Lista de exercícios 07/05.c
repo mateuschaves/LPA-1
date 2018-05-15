@@ -7,8 +7,13 @@
 */
 
 void main(void){
-    char string[] = "Meunomejulia";
-    int tamanho = (sizeof(string)/sizeof(char)) - 1;
-    printf("Tamanho da string: %i\n",tamanho);
+    char string[1024];
+    int i;
+    printf("Informe uma frase: ");
+    gets(string);
+    while(string[i] != '\0'){
+        i++;
+    }
+    printf("A frase informada tem %i caracteres.\n", i);
     system("pause");
 }
