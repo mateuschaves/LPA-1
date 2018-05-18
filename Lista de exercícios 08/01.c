@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /*
     1. Crie um programa que cadastre nome, idade ,sexo (M ou F) em uma
     estrutura pessoa e leia esses valores e exiba esses dados depois.
 */
+
 void main(void){
     typedef struct{
         char name[60], gender;
