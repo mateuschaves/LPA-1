@@ -13,7 +13,7 @@ void main(void){
     people person;
     printf("Type your name: ");
     gets(person.name);
-    printf("Type yout gender: ");
+    printf("Type your gender: ");
     scanf("%c", &person.gender);
     printf("Type your age: ");
     scanf("%i", &person.age);
