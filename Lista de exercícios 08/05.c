@@ -16,7 +16,7 @@ void main(void){
         float price;
     } products;
     products product[100];
-    int menu = 0, options, i = 0, code, index;
+    int menu = 0, options, i = 0, code, index = -1;
     while(menu != 1){
         printf("What do you want to do ?\n1 - Product Registration\n2 - Check price\n3 - List products\n--->");
         scanf("%i", &options);
@@ -41,15 +41,17 @@ void main(void){
                     if(code == product[o].code){
                         index = o;
                         break;
-                    }else{
-                        printf("Product not found !\n");
                     }
                 }
-                printf("\n---- Product Found ! ------\n\n");
-                printf("Name: %s\n", product[index].name);
-                printf("Price: R$%.2f\n", product[index].price);
-                printf("Code: %i\n", product[index].code);
-                printf("--------------------------\n");
+                if(index != -1){
+                    printf("\n---- Product Found ! ------\n\n");
+                    printf("Name: %s\n", product[index].name);
+                    printf("Price: R$%.2f\n", product[index].price);
+                    printf("Code: %i\n", product[index].code);
+                    printf("--------------------------\n");
+                }else{
+                    printf("\n\nProduct not found !\n\n");
+                }
                 break;
             case 3:
                 for(int o = 0; o < i; o++){
@@ -63,7 +65,6 @@ void main(void){
             default:
                 printf("Code doesn't exist !\n\n");
         }
-    
         printf("Do you want to leave ?\n1 - Yes !\n2 - Nope !\n ---> ");
         fflush(stdin);                
         scanf("%i", &menu);
