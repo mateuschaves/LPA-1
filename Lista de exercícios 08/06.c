@@ -30,6 +30,7 @@ void main(void){
 
         int menu = 0, count_id, check = 0, options, index_count;
         float amount;
+        char message[] = "Operation performed successfully !";
 
         for(int i = 0; i < 2; i++){
             printf("Type your name: ");
@@ -64,18 +65,31 @@ void main(void){
                     case 1:
                             printf("Enter deposit amount: ");
                             scanf("%f", &amount);
+                            if(amount < 0){
+                                amount *= -1;
+                                printf("\n\nThe number entered has been transformed into positive.\n\n");
+                            }
                             count[index_count].balance += amount;
                         break;
                     case 2:
                             printf("Enter cash out amount: ");
                             scanf("%f", &amount);
-                            count[index_count].balance -= amount;
+                            if(amount < 0){
+                                amount *= -1;
+                                printf("\n\nThe number entered has been transformed into positive.\n\n");
+                            }
+                            if(amount > count[index_count].balance){
+                                printf("\n\nYou do not have that much money like that.\n\n");
+                                strcpy(message, "Unauthorized operation !");
+                            }else{
+                                count[index_count].balance -= amount;
+                            }
                         break;
                     default:
                         printf("Option doesn't exist !\n");
                 }
             }
-            printf("\n--------- Operation performed successfully ! -------------\n");
+            printf("\n--------- %s -------------\n", message);
             printf("Account owner: %s\n", count[index_count].name);
             printf("Balance: %.2f\n",  count[index_count].balance);
             printf("CPF: %i\n", count[index_count].cpf);
