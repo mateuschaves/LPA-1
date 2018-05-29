@@ -28,8 +28,8 @@ void main(void){
 
         counts count[5];
 
-        int menu = 0, count_id, check = 0, options, index_count;
-        float amount;
+        int menu = 0, count_id, check = 0, second_check = 0, options, index_count, index_count_destiny;
+        float amount, max_cash_out = 1000;
         char message[] = "Operation performed successfully !";
 
         for(int i = 0; i < 2; i++){
@@ -59,7 +59,8 @@ void main(void){
             if(check == 0){
                 printf("Account number doesn't exist !\n");
             }else{
-                printf("Choose a option:\n1 - Deposit\n2 - Cash out\n ---> ");
+                check = 0;
+                printf("Choose a option:\n1 - Deposit\n2 - Cash out\n3 - Transfer\n4 - Consult\n ---> ");
                 scanf("%i", &options);
                 switch(options){
                     case 1:
@@ -74,16 +75,48 @@ void main(void){
                     case 2:
                             printf("Enter cash out amount: ");
                             scanf("%f", &amount);
-                            if(amount < 0){
-                                amount *= -1;
-                                printf("\n\nThe number entered has been transformed into positive.\n\n");
-                            }
-                            if(amount > count[index_count].balance){
-                                printf("\n\nYou do not have that much money like that.\n\n");
-                                strcpy(message, "Unauthorized operation !");
+                            if(amount < max_cash_out){
+                                if(amount < 0){
+                                    amount *= -1;
+                                    printf("\n\nThe number entered has been transformed into positive.\n\n");
+                                }
+                                if(amount > count[index_count].balance){
+                                    printf("\n\nYou do not have that much money like that.\n\n");
+                                    strcpy(message, "Unauthorized operation !");
+                                }else{
+                                    count[index_count].balance -= amount;
+                                }
                             }else{
-                                count[index_count].balance -= amount;
+                                printf("\n\nAmount can not be greater than 1000 !\n\n");
                             }
+                        break;
+                    case 3:
+                            printf("Type the account's ID to transfer: ");
+                            scanf("%i", &count_id);
+                            printf("Type the amount to transfer: ");
+                            scanf("%f", &amount);
+                            for(int o = 0; o < 5; o++){
+                                if(count_id == count[o].id){
+                                    index_count_destiny = o;
+                                    second_check++;
+                                    break;
+                                }
+                            }
+                            if(second_check > 0){
+                                if(amount > count[index_count].balance){
+                                    printf("\n\nYou do not have that much money like that.\n\n");
+                                    strcpy(message, "Unauthorized operation !");
+                                }else{
+                                    count[index_count].balance -= amount;
+                                    count[index_count_destiny].balance += amount;
+                                    printf("%s balance: \n", count[index_count].name, count[index_count].balance);
+                                    printf("%s balance: \n", count[index_count_destiny].name, count[index_count_destiny].balance);
+                                }
+                            }else{
+                                printf("\n\n Account typed doesn't exist ! \n\n");
+                            }
+                            break;
+                    case 4:
                         break;
                     default:
                         printf("Option doesn't exist !\n");
@@ -97,6 +130,7 @@ void main(void){
             printf("\n----------------------------------------------------------\n\n\n");
             printf("Do you want to leave ?\n1 - Yep !\n2 - Nope !\n ----> ");
             scanf("%i", &menu);
+            strcpy(message, "Operation performed successfully !");
         }
 
 }
