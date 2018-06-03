@@ -9,9 +9,18 @@
 int factorial (int n);
 
 void main(void){
-    int f;
-    f = factorial(6);
-    printf("%i\n", f);
+    int f, n;
+    printf("Informe o valor: ");
+    if(!scanf("%i", &n)){
+        printf("\nValor digitado não é do tipo inteiro !\n");
+    }else{
+        if(n > 0){
+            f = factorial(n);
+            printf("%i\n", f);
+        }else{
+            printf("Valor informado não é positivo !");
+        }
+    }
     system("pause");
 }
 
