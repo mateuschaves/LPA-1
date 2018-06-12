@@ -8,25 +8,26 @@
     A média calculada também deve retornar por parâmetro.
 */
 
+// Assinatura da função, não é necessário se criar a função antes do main().
 float average(float n1, float n2, float n3, char type);
 
 void main(void){
+
+    // Variáveis que vão guardar as 3 notas e a média do aluno.
     float n1, n2, n3, m;
+
+    // Variável que vai guardar o tipo de média, A para aritmética e P para Ponderada.
     char type;
-    for(int i = 0; i < 3; i++){
-        printf("Informe a nota %i: ", i + 1);
-        switch(i){
-            case 0:
-                scanf("%f", &n1);
-                break;
-            case 1:
-                scanf("%f", &n2);
-                break;
-            case 2:
-                scanf("%f", &n3);
-                break;        
-        }
-    }
+
+    printf("Informe a primeira nota: ");
+    scanf("%f", &n1);
+
+    printf("Informe a segunda nota: ");
+    scanf("%f", &n2);
+
+    printf("Informe a terceira nota: ");
+    scanf("%f", &n3);
+
     printf("Informe o tipo de media: ");
     fflush(stdin);
     scanf("%c", &type);
