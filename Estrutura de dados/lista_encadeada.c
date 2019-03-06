@@ -17,12 +17,22 @@ typedef struct list{
 } List;
 
 List* createList();
+void push(List* list, DataNode data);
 
 
 int main(){
     List* list = createList();
 
-    printf("%d", list->size);
+    DataNode data;
+    data.id = 3;
+
+    push(list, data);
+
+    data.id= 9;
+
+    push(list, data);
+
+    printf("%d %d", list->head->data.id, list->head->next->data.id);
 
     system("pause");
 }
@@ -34,4 +44,13 @@ List* createList(){
     list->head = NULL;
 
     return list;
+}
+
+void push(List* list, DataNode data){
+    Node* node = (Node*) malloc(sizeof(Node));
+
+    node->data = data;
+    node->next = list->head;
+    list->head = node;
+    list->size++;
 }
