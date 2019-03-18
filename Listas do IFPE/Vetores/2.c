@@ -17,7 +17,6 @@ void main(void){
 
     // Preenchendo o vetor b de acordo com os valores do vetor a
     for(int i = 0; i < 10; i++){
-
         // Verificando se o índice é um número par
         if(i % 2 == 0)
             // O valor de b no índice i vai ser igual a metade do valor do vetor a no índice i
