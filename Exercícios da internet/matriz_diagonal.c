@@ -35,7 +35,7 @@ void main(void){
 
     for(int j = 0; j < 20; j++){
         for(int k = 0; k < 20; k++){
-            if(isDiagonalTopLeft(j, k) == 0){
+            if(isDiagonalBottomRight(j, k) == 0){
                 printf("m[%d][%d] = %d NDV\n", j, k, m[j][k]);
             }
         }
@@ -63,7 +63,11 @@ int isDiagonalTopLeft(int j, int k){
 }
 
 int isDiagonalBottomRight(int j, int k){
-
+    // Invalid position
+    if( j + 2 < 0 || k > 16)
+        return 0;
+    else
+        return 1;
 }
 int isDiagonalTopRight(int j, int k){
 
