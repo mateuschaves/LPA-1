@@ -3,16 +3,17 @@
 
 void main(void){
 
-    int n, q = 0;
+    int n, q = 0, i;
     scanf("%d", &n);
 
-    for(int i = 1; i <= n; i++){
+    for(i = 1; i <= n; i++){
         if(n % i == 0 && i % 3 == 0){
             q++;
         }
     }
-
-    printf("%d", q);
-
-    system("pause");
+    
+    if(q)
+        printf("%d", q);
+    else
+        printf("O numero nao possui divisores multiplos de 3!");        
 }
