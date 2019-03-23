@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 
-int isDiagonalBottomLeft(int j, int k);
-int isDiagonalTopLeft(int j, int k);
+int isDiagonalBottomLeft(int line, int column);
+int isDiagonalTopLeft(int line, int column);
 
-int isDiagonalBottomRight(int j, int k);
-int isDiagonalTopRight(int j, int k);
+int isDiagonalBottomRight(int line, int column);
+int isDiagonalTopRight(int line, int column);
 
 void main(void){
 
@@ -33,10 +33,10 @@ void main(void){
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     };
 
-    for(int j = 0; j < 20; j++){
-        for(int k = 0; k < 20; k++){
-            if(isDiagonalBottomLeft(j, k) && isDiagonalTopLeft(j, k) && isDiagonalBottomRight(j, k) && isDiagonalTopRight(j, k) ){
-                printf("m[%d][%d] = %d DV\n", j, k, m[j][k]);
+    for(int line = 0; line < 20; line++){
+        for(int column = 0; column < 20; column++){
+            if(isDiagonalBottomLeft(line, column) && isDiagonalTopLeft(line, column) && isDiagonalBottomRight(line, column) && isDiagonalTopRight(line, column) ){
+                printf("m[%d][%d] = %d DV\n", line, column, m[line][column]);
             }
         }
             
@@ -46,32 +46,32 @@ void main(void){
     system("pause");
 }
 
-int isDiagonalBottomLeft(int j, int k){
+int isDiagonalBottomLeft(int line, int column){
     // Invalid position
-    if( j + 2 > 20 || k < 3)
+    if( line + 2 > 20 || column < 3)
         return 0;
     else
         return 1;
 }
 
-int isDiagonalTopLeft(int j, int k){
+int isDiagonalTopLeft(int line, int column){
     // Invalid position
-    if( j < 3 || k < 3)
+    if( line < 3 || column < 3)
         return 0;
     else
         return 1;
 }
 
-int isDiagonalBottomRight(int j, int k){
+int isDiagonalBottomRight(int line, int column){
     // Invalid position
-    if( j + 2 < 0 || k > 16)
+    if( line + 2 < 0 || column > 16)
         return 0;
     else
         return 1;
 }
-int isDiagonalTopRight(int j, int k){
+int isDiagonalTopRight(int line, int column){
     // Invalid position
-    if( j - 2 < 0 || k > 16)
+    if( line - 2 < 0 || column > 16)
         return 0;
     else
         return 1;
