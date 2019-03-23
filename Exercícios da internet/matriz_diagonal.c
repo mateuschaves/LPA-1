@@ -13,8 +13,8 @@ void main(void){
     int matrix[20][20] = {
         4, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
         0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0,
-        0, 0, 8, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0,
-        2, 0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0,
+        0, 0, 8, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0,
+        2, 0, 0, 9, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0,
         0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0,
         0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -63,7 +63,7 @@ void main(void){
         }
     }
  
-    printf("\n\n Greatest Product of four numbers:\n Matrix[%d][%d] = %d\n\n", line1, column1, greatestProductOfThreeNumbers);
+    printf("\n\n Greatest Product of four numbers = %d\n\n", greatestProductOfThreeNumbers);
 
     system("pause");
 }
@@ -93,7 +93,7 @@ int isDiagonalBottomRight(int line, int column){
 }
 int isDiagonalTopRight(int line, int column){
     // Invalid position
-    if( line - 2 < 0 || column > 16)
+    if( line < 3 || column > 16)
         return 0;
     else
         return 1;
