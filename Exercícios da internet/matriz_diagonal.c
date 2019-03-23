@@ -18,8 +18,7 @@ typedef struct T_positions{
 }T_positions;
 
 void main(void){
-    int greatestProductOfThreeNumbers = 0;
-    int position1, position2, position3, position4;
+    int greatestProductOfFourNumbers = 0;
     const int RANGE = 10;
     srand( (unsigned)time(NULL) ); 
     T_positions pos[4];
@@ -66,8 +65,8 @@ void main(void){
         for(int column = 0; column <= 19; column++){
 
             if(isDiagonalTopRight_ToBottomLeft_Ok(line, column)){
-                if((matrix[line][column] * matrix[line + 1][column - 1] * matrix[line + 2][column - 2] * matrix[line + 3][column - 3]) > greatestProductOfThreeNumbers){
-                    greatestProductOfThreeNumbers = matrix[line][column] * matrix[line + 1][column - 1] * matrix[line + 2][column - 2] * matrix[line + 3][column - 3];
+                if((matrix[line][column] * matrix[line + 1][column - 1] * matrix[line + 2][column - 2] * matrix[line + 3][column - 3]) > greatestProductOfFourNumbers){
+                    greatestProductOfFourNumbers = matrix[line][column] * matrix[line + 1][column - 1] * matrix[line + 2][column - 2] * matrix[line + 3][column - 3];
 
                     pos[0].line = line;
                     pos[0].column = column;
@@ -85,8 +84,8 @@ void main(void){
             }
 
             if(isDiagonalTopLeft_ToBottomRight_Ok(line, column)){
-                if((matrix[line][column] * matrix[line + 1][column + 1] * matrix[line + 2][column + 2] * matrix[line + 3][column + 3]) > greatestProductOfThreeNumbers){
-                    greatestProductOfThreeNumbers = matrix[line][column] * matrix[line + 1][column + 1] * matrix[line + 2][column + 2] * matrix[line + 3][column + 3];
+                if((matrix[line][column] * matrix[line + 1][column + 1] * matrix[line + 2][column + 2] * matrix[line + 3][column + 3]) > greatestProductOfFourNumbers){
+                    greatestProductOfFourNumbers = matrix[line][column] * matrix[line + 1][column + 1] * matrix[line + 2][column + 2] * matrix[line + 3][column + 3];
                     
                     pos[0].line = line;
                     pos[0].column = column;
@@ -103,8 +102,8 @@ void main(void){
             }
 
             if(isHorizontalOk(column)){
-                if((matrix[line][column] * matrix[line][column + 1] * matrix[line][column + 2] * matrix[line][column + 3]) > greatestProductOfThreeNumbers){
-                    greatestProductOfThreeNumbers = matrix[line][column] * matrix[line][column + 1] * matrix[line][column + 2] * matrix[line][column + 3];
+                if((matrix[line][column] * matrix[line][column + 1] * matrix[line][column + 2] * matrix[line][column + 3]) > greatestProductOfFourNumbers){
+                    greatestProductOfFourNumbers = matrix[line][column] * matrix[line][column + 1] * matrix[line][column + 2] * matrix[line][column + 3];
 
                     pos[0].line = line;
                     pos[0].column = column;
@@ -120,8 +119,8 @@ void main(void){
                 }
             }
             if(isVerticalOk(line)){
-                if((matrix[line][column] * matrix[line + 1][column] * matrix[line + 2][column] * matrix[line + 3][column]) > greatestProductOfThreeNumbers){
-                    greatestProductOfThreeNumbers = matrix[line][column] * matrix[line + 1][column] * matrix[line + 2][column] * matrix[line + 3][column];
+                if((matrix[line][column] * matrix[line + 1][column] * matrix[line + 2][column] * matrix[line + 3][column]) > greatestProductOfFourNumbers){
+                    greatestProductOfFourNumbers = matrix[line][column] * matrix[line + 1][column] * matrix[line + 2][column] * matrix[line + 3][column];
 
                     pos[0].line = line;
                     pos[0].column = column;
@@ -157,7 +156,7 @@ void main(void){
     }
 
     printf("\n\n Greatest Product of four numbers: ");
-    printf(" %d * %d * %d * %d = %d\n\n\n", matrix[pos[0].line][pos[0].column],  matrix[pos[1].line][pos[1].column], matrix[pos[2].line][pos[2].column], matrix[pos[3].line][pos[3].column], greatestProductOfThreeNumbers);
+    printf(" %d * %d * %d * %d = %d\n\n\n", matrix[pos[0].line][pos[0].column],  matrix[pos[1].line][pos[1].column], matrix[pos[2].line][pos[2].column], matrix[pos[3].line][pos[3].column], greatestProductOfFourNumbers);
 
     system("pause");
 }
